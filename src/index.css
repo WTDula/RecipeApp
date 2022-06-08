@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&family=Roboto:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 1px;;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.root{
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px;
+}
+
+.search-form {
+  margin-top: 18px;
+}
+
+.search-input {
+  padding: 6px 16px;
+  min-width: 200px;
+  max-width: 100vw;
+  font-size: 15px;
+}
+
+.submit-btn {
+  padding: 6px 16px;
+  margin-left: 2px;
+  font-size: 16px;
+  background-color: rgb(20, 231, 55);
+  border: 2px solid rgb(20, 231, 55);
+  border-radius: 4px;
+  color: white;
+}
+
+.submit-btn:hover{
+  cursor: pointer;
+}
+
+.recipe:hover {
+  cursor: pointer;
+  color:rgb(20, 231, 55);
+}
+
+.recipe-img {
+  max-width: 100%;
+  margin: 0 2px;
+}
+
+.recipe-name {
+  max-width: 200px;
+  text-align: center;
+  margin: 12px 0px;
+}
+
+.recipes-grid {
+  margin: 0px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  padding: 1rem;
+}
+
