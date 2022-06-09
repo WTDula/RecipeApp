@@ -2,21 +2,22 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Recipe from './components/Recipe';
 import YOUR_APP_KEY from './secret';
+import axios from 'axios';
 
 
 function App() {
-  const [ query, setQuery] = useState('');
+  const [ query, setQuery] = useState('pasta');
   const [ recipes, setRecipes ] = useState([]);
 
 
-  const RECIPE_API = `https://api.edamam.com/api/recipes/v2?type=public&q=pasta&app_id=b242d324&app_key=${YOUR_APP_KEY}`;
+  const RECIPE_API = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=b242d324&app_key=${YOUR_APP_KEY}`;
   
   async function getRecipes(){
     console.log("recipe url: ", RECIPE_API)
-    let result = await Axios.get(RECIPE_API);
-    console.log("recipes: ", recipes)
+    let result = await axios.get(RECIPE_API);
+    
     setRecipes(result.data.hits);
-    console.log("result.data.hits: ", result.data.hits);
+    console.log("recipes: ", recipes)
   }
 
   const handleSubmit = (e) => {
