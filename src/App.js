@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
 import Recipe from './components/Recipe';
-require('dotenv').config();
+import YOUR_APP_KEY from './secret';
 
 
 
@@ -10,7 +10,7 @@ function App() {
   const [ query, setQuery] = useState('');
   const [ recipes, setRecipes ] = useState([]);
 
-  const YOUR_APP_KEY= 'e783fec19e5c17d3a6de053f82954827';//tried using process.env to get this, but doesnt work
+
   const RECIPE_API = `https://api.edamam.com/search?q=${query}&app_id=2ac6576e&app_key=${YOUR_APP_KEY}&health=alcohol-free`;
   
   async function getRecipes(){
