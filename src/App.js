@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 function App() {
-  const [ query, setQuery] = useState('pasta');
+  const [ query, setQuery] = useState('');
   const [ recipes, setRecipes ] = useState([]);
 
 
@@ -31,7 +31,7 @@ function App() {
   
   return (
     <div className="recipe-container">
-          <h1>Food Recipes</h1>
+          <h1>Inclusive Recipes</h1>
           <form className="search-form" onSubmit={handleSubmit}>
             <input 
             type="text"
