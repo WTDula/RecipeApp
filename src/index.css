@@ -26,6 +26,12 @@ body {
   color: blue;
 }
 
+.recipe-container .recipe{
+  border: 1px solid black;
+  margin: 2px;
+  border-radius: 1rem;
+}
+
 .search-form {
   margin-top: 18px;
 }
@@ -58,11 +64,11 @@ body {
 
 .recipe-img {
   max-width: 100%;
-  margin: 0 2px;
+  margin: 2px;
+  border-radius: 1rem;
 }
 
 .recipe-name {
-  max-width: 200px;
   text-align: center;
   margin: 12px 0px;
 }
