@@ -7,6 +7,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: rgb(178, 174, 174);
   margin: 0;
   padding: 0;
 }
@@ -22,6 +23,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 40px 24px;
+  color: blue;
 }
 
 .search-form {
