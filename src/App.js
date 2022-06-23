@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
 import Recipe from './components/Recipe';
 import YOUR_APP_KEY from './secret';
 import axios from 'axios';
@@ -25,9 +24,9 @@ function App() {
     getRecipes();
   }
 
-  // useEffect(() => {
-  //   getRecipes()
-  // }, [])
+  useEffect(() => {
+    getRecipes()
+  }, [])
   
   return (
     <div className="recipe-container">
@@ -45,8 +44,12 @@ function App() {
           value="Search" />  
       </form>
       <div className="recipes-grid">
-        {recipes.map((recipe) => {
-          return <Recipe recipe={recipe}/>;
+        {recipes.map((recipe, index) => {
+          return (
+            <div key={index}>
+              <Recipe recipe={recipe}/>
+            </div>
+          )
         })}
       </div>
     </div>
